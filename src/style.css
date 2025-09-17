@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+/* body{
+    @apply 
+} */
+
+.form-card{
+    @apply  relative ;
+}
+
+.form-card svg{
+    @apply  absolute md:top-10 top-8 left-0 w-5 pl-1
+}
+
+.form-card{
+    @apply mb-4
+}
+
+.form-card input{
+    @apply flex p-3 w-full mb-2 pl-10
+    border border-gray-300 rounded-lg
+    focus:outline-none focus:ring-2 focus:ring-blue-500
+}
+
+form label{
+    @apply md:text-lg
+}
+
+form .btn{
+    @apply bg-blue-500 text-center text-white py-2 px-3 
+    rounded-lg cursor-pointer font-bold w-full
+    hover:bg-blue-600 transition transform duration-300 ease-in
+}
+
+.form-card, [placeholder]{
+    @apply text-sm 
+}
+
+
+/* Tailwind Style above is for login and register  */
