@@ -12,7 +12,7 @@
 <template>  
   <!-- <notification position = 'bottom'/> -->
   
-  <NavBar/>
+  <NavBar v-if="!$route.meta.hideNavbar"/>
 
   <router-view></router-view>
 </template>

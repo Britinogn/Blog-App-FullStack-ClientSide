@@ -21,13 +21,15 @@ const routes = [
     {
         path: '/login',
         name: 'Login',
-        component: Login
+        component: Login,
+        meta:{hideNavbar: true}
     },
 
     {
         path: '/register',
         name: 'Register',
-        component: Register
+        component: Register,
+        meta:{hideNavbar: true}
     },
 
     {
