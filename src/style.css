@@ -39,3 +39,23 @@ form .btn{
 
 
 /* Tailwind Style above is for login and register  */
+
+
+/* :root{
+    --brand-color: #1d4ed8;
+
+} */
+
+@layer base {
+    .list .content h1{
+        @apply  text-4xl font-medium text-white/25
+    }
+
+     .list .content p{
+        @apply  text-lg font-normal pb-15
+    }
+
+ 
+
+   
+}

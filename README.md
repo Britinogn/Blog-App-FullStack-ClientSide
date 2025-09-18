@@ -6,3 +6,6 @@ Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://
 
 
 This is my first blog project, where individuals can share their day to day life experience
+
+
+Refactor code structure for improved readability and maintainability

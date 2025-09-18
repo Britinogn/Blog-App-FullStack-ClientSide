@@ -4,6 +4,9 @@ import {auth} from './auth'
 const api = axios.create({
     baseURL: 'https://blog-backend-api-sisi.onrender.com/api/v1',
     timeout: 10000
+
+    // baseURL: 'http://localhost:5000/api/v1',
+    // timeout: 10000
 });
 
 //attach token to every request if available

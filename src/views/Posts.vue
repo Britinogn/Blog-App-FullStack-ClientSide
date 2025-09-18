@@ -171,7 +171,6 @@
 <script>
     import api from '../services/api';
     import { auth } from '../services/auth';
-import PostDetails from './PostDetails.vue';
 
     export default{
         data(){
