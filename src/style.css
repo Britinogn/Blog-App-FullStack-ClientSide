@@ -48,7 +48,7 @@ form .btn{
 
 @layer base {
     .list .content h1{
-        @apply  text-4xl font-medium text-white/25
+        @apply  text-4xl font-medium text-white mb-5
     }
 
      .list .content p{

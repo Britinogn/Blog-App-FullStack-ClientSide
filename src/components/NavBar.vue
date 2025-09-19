@@ -6,21 +6,29 @@
         <router-link to="/" class="group flex items-center space-x-3">
           <div class="relative">
             <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-all duration-300 shadow-lg group-hover:shadow-xl">
-              <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              <!-- File: techpulse-tp-monogram.svg -->
+              <svg                                                                                                                                                                                                                                                                                                                                                                                                   vg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="400" height="400" role="img" aria-label="TechPulse monogram">
+                <rect width="200" height="200" rx="28" fill="#0B2545"/>                                                                                                               
+                <!-- T shape -->                                
+                <path d="M42 56 H158 V84 H112 V156 H88 V84 H42 Z" fill="#0B66FF"/>
+                <!-- P loop with pulse cut -->                                                                                
+                <path d="M112 84 H150 A22 22 0 0 1 150 128 H112 V156" fill="#fff" transform="translate(0,-8)"/>
+                <!-- pulse cut through P (white negative-space effect) -->
+                <path d="M92 120 L106 92 L118 116 L136 76 L148 116" fill="none" stroke="#07112A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
+
             </div>
             <!-- Floating indicator -->
             <div class="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
           </div>
           <div class="hidden sm:block">
             <h1 class="text-xl font-semibold bg-gradient-to-r from-slate-800 to-slate-600 bg-clip-text text-transparent">
-              DevBlog
+              TechPulse
             </h1>
-            <p class="text-xs text-slate-500 -mt-1">Fresh insights</p>
-          </div>
+            <p class="text-xs uppercase text-slate-500 -mt-1">Tech Insights & Innovation</p>
+          </div>                        
         </router-link>
-
+                                                            
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-1">
           <router-link 
@@ -168,7 +176,7 @@
             </div>
           </template>
         </div>
-
+                   
         <!-- Mobile Menu Button -->
         <button 
           @click="toggleMobileMenu"
@@ -199,9 +207,9 @@
             />
           </svg>
         </button>
-      </div>
-    </div>
-
+      </div>                           
+    </div>                      
+                                                                                                             
     <!-- Mobile Menu -->
     <transition
       enter-active-class="transition ease-out duration-300"

@@ -1,6 +1,6 @@
 <template>
     <section class="carousel p-15 bg-gradient-to-r from-blue-400 via-gray-600 to-purple-900  h-screen overflow-hidden ">
-        <div class="flex items-center bg-whit justify-center  ">
+        <div class="md:flex items-center bg-whit justify-center  ">
             <div class="list">
                 <article class="item">
                     <div class="main-content">
@@ -10,10 +10,10 @@
                                 covering coding cybersecurity and emerging technologies
                             </p>
 
-                            <button class="btn">
-                                <router-link to="/posts" 
+                            <button class="btn mb-7 ">
+                                <router-link to="/register" 
                                 class="bg-white p-5 text-black rounded-lg
-                                font-medium text-lg
+                                font-medium text-lg  
                                 hover:bg-black hover:text-white 
                                 transition transform ease-in duration-400 
                                 " >
@@ -26,7 +26,7 @@
             </div>
 
             <div class=" ">
-                <figure class="border-amber-800 shadow-2xl  ">
+                <figure class="shadow-2xl  ">
                         <img src="/images/img1.png" alt="">
                 </figure>
                 <button ></button>
@@ -36,7 +36,7 @@
     </section>
 
     <!-- section 2 -->
-    <section class="min-h-screen bg-gradient-to-br from-slate-900 via-blue-50 to-purple-900">
+    <section class="min-h-screen p-15 bg-gradient-to-br from-slate-900 via-blue-50 to-purple-900">
         <div class="md:flex w-full ">
             
             <div class="main-content basis-[70%]">
@@ -205,18 +205,9 @@
                 </div>
             </div>
 
-            <!-- <div class="right-sidebar  basis-[25%] md:block">
-                <div class="bg-red-400 ">
-                    <h1>
-                        WELCOME TO TECHPULSE...
-                        COME TO TECHPULSE...
-                        COME TO TECHPULSE...
-                    </h1>
-                </div>
-            </div> -->
-
             
             <!-- Right Sidebar -->
+            
             <div class="right-sidebar basis-[25%] md:block">
                 <div class="sticky top-8 space-y-6 p-4">
                     
@@ -344,16 +335,7 @@
                         </div>
                     </div>
 
-                    <!-- <button @click="fetchPosts(currentPage - 1)" :disabled="currentPage === 1"
-                    class="text-white gap-10 p-5"
-                    >
-                        Prev
-                    </button>
-                    <button @click="fetchPosts(currentPage + 1)" :disabled="currentPage === totalPages">
-                        Next
-                    </button> -->
-
-
+                
                 </div>
             </div>
 
