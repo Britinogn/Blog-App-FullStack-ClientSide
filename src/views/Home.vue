@@ -10,7 +10,7 @@
                                 covering coding cybersecurity and emerging technologies
                             </p>
 
-                            <button class="btn mb-7 ">
+                            <button class="btn mb-15 ">
                                 <router-link to="/register" 
                                 class="bg-white p-5 text-black rounded-lg
                                 font-medium text-lg  
