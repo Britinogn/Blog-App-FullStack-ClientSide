@@ -325,7 +325,7 @@
 
                 } catch (err) {
                     console.log('Error posting comments ', err);
-                    this.commentError = err.response?.data?.message || 'Failed to post comment'
+                    this.commentError = 'You need to login to be able to share comments'
                 } finally{
                     this.commentLoading = false;
                 }

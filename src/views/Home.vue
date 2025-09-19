@@ -1,20 +1,20 @@
 <template>
-    <section class="carousel p-7.5  bg-gradient-to-r from-blue-400 via-gray-600 to-purple-900  h-screen overflow-hidden ">
-        <div class="md:flex items-center bg-whit justify-center  ">
+    <section class="carousel p-7.5  bg-gradient-to-r  from-blue-400 via-gray-600 to-purple-900  min-h-screen overflow-hidden ">
+        <div class="md:flex items-center bg-white justify-center rounded-3xl  ">
             <div class="list">
                 <article class="item">
-                    <div class="main-content">
-                        <div class="content text-gray-300">
-                            <h1 class="">Welcome to TechPulse</h1>
+                    <div class="main-content ">
+                        <div class="content p-10 text-gray-600">
+                            <h1 class="text-black/70 ">Welcome to TechPulse</h1>
                             <p >Insights, tutotials and discussions for tech professionals 
                                 covering coding cybersecurity and emerging technologies
                             </p>
 
                             <button class="btn mb-15 ">
                                 <router-link to="/register" 
-                                class="bg-white p-5 text-black rounded-lg
-                                font-medium text-lg  
-                                hover:bg-black hover:text-white 
+                                class="bg-blue-600 text-white  p-5 rounded-lg
+                                font-medium text-lg  shadow-2xl
+                                hover:bg-purple-700 hover:text-white 
                                 transition transform ease-in duration-400 
                                 " >
                                  Start Reading
@@ -26,8 +26,8 @@
             </div>
 
             <div class=" ">
-                <figure class="shadow-2xl  ">
-                        <img src="/images/img1.png" alt="">
+                <figure class="shadow-2xl shadow-purple-300 p-10 rounded ">
+                        <img src="/images/img1.png" alt ="" class=" rounded-4xl-lg  ">
                 </figure>
                 <button ></button>
                 <button></button>
@@ -164,7 +164,7 @@
                                     <div class="flex items-center justify-between pt-4 border-t border-slate-100">
                                     
                                         <router-link 
-                                                :to="{ name:'Posts'}" 
+                                                :to="{ name:'PostDetails' , params:{ id: post._id } }" 
                                                 class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium text-sm group/link"
                                             >
                                             <span>Read More</span>
@@ -342,10 +342,45 @@
         </div>   
     </section>
 
+    <!-- FAQs -->
+
+    <section class="p-7.5">
+        <div class="max-w-2xl bg-gray-600 text-white mx-auto p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-6 text-center">Frequently Asked Questions</h2>
+            
+            <div 
+                v-for="(faq, index) in faqs" 
+                :key="index" 
+                class="mb-4 border-b border-white/70 pb-4 last:border-b-0"
+                >
+                <button 
+                @click="toggleFaq(index)" 
+                class="flex justify-between items-center w-full text-left font-medium text-lg focus:outline-none hover:text-blue-200 transition-colors duration-200"
+                :aria-expanded="faq.open"
+                :aria-controls="'faq-answer-' + index"
+                >
+                <span>{{ faq.question }}</span>
+                <span class="text-xl font-bold ml-4 flex-shrink-0">
+                    {{ faq.open ? '−' : '+' }}
+                </span>
+                </button>
+                
+                <transition name="fade">
+                    <div v-if="faq.open" :id="'faq-answer-' + index" class="mt-3">
+                        <p class="text-blue-100 leading-relaxed">
+                        {{ faq.answer }}
+                        </p>
+                    </div>
+                </transition>
+            </div>
+        </div>
+    </section>
+
 </template>
 
 <script>
     import api from '../services/api'
+    import { reactive } from "vue";
 
     export default{
         name: 'Home',
@@ -366,8 +401,11 @@
                 },
                 currentPage: 1,   // which page user is on
                 totalPages: 0,    // total number of pages from backend
-                limit: 10      // posts per page
+                limit: 10  ,    // posts per 
+                
+                
             }
+         
         },
 
         computed: {
@@ -514,5 +552,52 @@
             await this.fetchPosts();
             await this.initializeSidebar();
         },
+
+        setup(){
+            const faqs = reactive ([
+                {
+                    question: "What is TechPulse?",
+                    answer: "TechPulse is a blog that shares tutorials, insights, and the latest trends in technology.",
+                    open: false,
+                },
+                {
+                    question: "How often are new posts published?",
+                    answer: "We publish fresh content every week to keep you updated on the latest in tech.",
+                    open: false,
+                },
+                {
+                    question: "Can I contribute to TechPulse?",
+                    answer: "Yes! You can reach out to us to submit articles or collaborate on tutorials.",
+                    open: false,
+                },
+
+            ])
+
+            
+            function toggleFaq(index) {
+                faqs[index].open = !faqs[index].open
+            }
+
+            return {
+                faqs,
+                toggleFaq
+            }
+            }
+
+
+
     }
+
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
