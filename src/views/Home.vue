@@ -1,5 +1,5 @@
 <template>
-    <section class="carousel p-15 bg-gradient-to-r from-blue-400 via-gray-600 to-purple-900  h-screen overflow-hidden ">
+    <section class="carousel p-7.5  bg-gradient-to-r from-blue-400 via-gray-600 to-purple-900  h-screen overflow-hidden ">
         <div class="md:flex items-center bg-whit justify-center  ">
             <div class="list">
                 <article class="item">
@@ -36,7 +36,7 @@
     </section>
 
     <!-- section 2 -->
-    <section class="min-h-screen p-15 bg-gradient-to-br from-slate-900 via-blue-50 to-purple-900">
+    <section class="min-h-screen p-7.5 bg-gradient-to-br from-slate-900 via-blue-50 to-purple-900">
         <div class="md:flex w-full ">
             
             <div class="main-content basis-[70%]">
