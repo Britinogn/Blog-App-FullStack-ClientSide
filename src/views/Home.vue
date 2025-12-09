@@ -39,7 +39,7 @@
     <section class="min-h-screen p-7.5 bg-gradient-to-br from-slate-900 via-blue-50 to-purple-900">
         <div class="md:flex w-full ">
             
-            <div class="main-content basis-[70%]">
+            <div class="main-content ">
                 
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
                     
@@ -208,11 +208,11 @@
             
             <!-- Right Sidebar -->
             
-            <div class="right-sidebar basis-[25%] md:block">
+            <div class="right-sidebar md:block">
                 <div class="sticky top-8 space-y-6 p-4">
                     
                     <!-- Recent Posts -->
-                    <div class="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg p-6">
+                    <div class="bg-white/80 backdrop-blur-sm  rounded-xl shadow-lg p-6">
                         <h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
                             <svg class="w-5 h-5 mr-2 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>

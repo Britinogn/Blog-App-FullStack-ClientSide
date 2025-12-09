@@ -93,6 +93,7 @@
                         email: this.email,
                         password: this.password
                     });
+                    
                     const token = res.data.token;
                     setToken(token);
                     // this.$notify('Login Successful!')

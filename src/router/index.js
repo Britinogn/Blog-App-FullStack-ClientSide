@@ -22,14 +22,14 @@ const routes = [
         path: '/login',
         name: 'Login',
         component: Login,
-        meta:{hideNavbar: true}
+        meta:{hideNavbar: true, hideFooter: true}
     },
 
     {
         path: '/register',
         name: 'Register',
         component: Register,
-        meta:{hideNavbar: true}
+        meta:{hideNavbar: true, hideFooter: true}
     },
 
     {
@@ -58,7 +58,7 @@ const routes = [
         path: '/posts',
         name: 'Posts',
         component: Posts,
-        meta:{requiresAuth: true}
+        // meta:{requiresAuth: true}
     },
 
 ]
